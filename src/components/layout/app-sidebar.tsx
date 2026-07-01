@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navGroups } from "./nav-items";
-import logo from "@/assets/logo.webp.asset.json";
+import logo from "@/assets/logo.webp";
 
 interface Props {
   collapsed: boolean;
@@ -22,7 +22,7 @@ export function AppSidebar({ collapsed, onToggle }: Props) {
       <div className="flex h-16 items-center gap-2 border-b border-sidebar-border/70 px-3">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 rounded-xl p-1.5 transition-colors hover:bg-sidebar-accent">
           <div className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-xl bg-white shadow-soft ring-1 ring-border">
-            <img src={logo.url} alt="Max Rehab" className="h-7 w-7 object-contain" />
+            <img src={logo} alt="Max Rehab" className="h-7 w-7 object-contain" />
           </div>
           <AnimatePresence initial={false}>
             {!collapsed && (
